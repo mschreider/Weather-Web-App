@@ -75,32 +75,32 @@ def get_futureweather(json_data, dayIndex):
 
 def run():
 
-    #ip_address = get_IP()  # uncomment when ready to deploy
-    #json_data = get_information(ip_address)    # uncomment when ready to deploy
-    with open('data.json') as f:    #remove when ready to deploy
-        json_data = json.load(f)    #remove when ready to deploy
+    ip_address = get_IP()  # uncomment when ready to deploy
+    json_data = get_information(ip_address)    # uncomment when ready to deploy
+    #with open('data.json') as f:    #remove when ready to deploy
+    #    json_data = json.load(f)    #remove when ready to deploy
 
-        location = get_location(json_data)
-        date = get_date(json_data)
-        long_date = get_longDate(date)
-        day_of_week_abv = get_dayOfWeek(date)
+    location = get_location(json_data)
+    date = get_date(json_data)
+    long_date = get_longDate(date)
+    day_of_week_abv = get_dayOfWeek(date)
 
-        current_weather = get_currentweather(json_data)
-        current_conditions = get_currentconditions(current_weather)
-        current_temp = get_currenttemp(current_weather)
-        current_weathericon = get_weathericon(current_conditions)
-        
-        # FUTURE DATA
-        future = []
-        for dayIndex in range(1, 4):
-            data={}
-            future_dayofweek, future_conditions, future_high, future_low = get_futureweather(json_data, dayIndex)
-            future_weathericon = get_weathericon(future_conditions)
-            data["dayofweek"] = future_dayofweek
-            data["weathericon"] = future_weathericon
-            data["conditions"] = future_conditions
-            data["high"] = future_high
-            data["low"] = future_low
-            future.append(data)
+    current_weather = get_currentweather(json_data)
+    current_conditions = get_currentconditions(current_weather)
+    current_temp = get_currenttemp(current_weather)
+    current_weathericon = get_weathericon(current_conditions)
+    
+    # FUTURE DATA
+    future = []
+    for dayIndex in range(1, 4):
+        data={}
+        future_dayofweek, future_conditions, future_high, future_low = get_futureweather(json_data, dayIndex)
+        future_weathericon = get_weathericon(future_conditions)
+        data["dayofweek"] = future_dayofweek
+        data["weathericon"] = future_weathericon
+        data["conditions"] = future_conditions
+        data["high"] = future_high
+        data["low"] = future_low
+        future.append(data)
 
-        return future, location, long_date, current_weathericon, current_temp, current_conditions
+    return future, location, long_date, current_weathericon, current_temp, current_conditions
