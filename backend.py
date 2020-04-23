@@ -4,10 +4,10 @@ import json, pandas
 import sys, datetime
 
 def get_IP():
-    url = "http://checkip.dyndns.org"
-    data = urllib.request.urlopen(url).read().decode('utf-8')   # .decode(utf-8) converts from 'bytes' to 'str'
-    # print(type(data))
-    ip_address = data[76:90]    # Parse 76th to 90th index of str
+    # url = "http://checkip.dyndns.org"
+    # data = urllib.request.urlopen(url).read().decode('utf-8')   # .decode(utf-8) converts from 'bytes' to 'str'
+    ip_address = str(request.remote_addr)
+    # ip_address = data[76:90]    # Parse 76th to 90th index of str
     return ip_address
 
 def get_information(ip_address):
