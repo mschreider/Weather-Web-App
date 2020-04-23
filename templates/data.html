@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Weather App</title>
+        <link type="text/css" rel="stylesheet" href="../static/css/main.css">
+        <link type="text/css" rel="stylesheet" href="../static/css/weather-icons.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
+        
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+
+    <body>
+        <!-- CURRENT WEATHER -->
+        <div class="current-info">
+            <nav>
+                <button id="locateBtn" class="on">
+                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                </button>
+            </nav>
+
+            <div class="current-location" >
+                <h1 class="location">{{location | default('---')}}</h4>
+            </div>
+            <div class="current-date">
+                <h2 class="date">{{date}}</h2>
+            </div>
+
+            <div class="current-weather">
+                <div id="weatherIcon">
+                    <i class="wi {{ current_weathericon | default('wi-cloud')}}"></i>
+                </div>
+                <p class="current-temp">{{current_temp | default('--')}}</p>
+                <p class="current-conditions">{{current_conditions | default('--')}}</p>
+            </div>
+        </div>
+
+        <!-- FUTURE WEATHER -->
+        <div class="future">
+            <div class="container">
+                {% set elem = [] %}
+                {% for value in future[0].values() %}
+                    {{ elem.append(value) or "" }}
+                {% endfor %}
+                <div class="future-dayofweek">
+                    <h2>{{ elem[0] | default('---') }}</h2>
+                </div>
+                <div class="future-weathericon">
+                    <i class="wi {{elem[1] | default('wi-cloud')}}"></i>
+                </div>
+                <p class="future-conditions">{{elem[2] | default('--')}}</p>
+                <div class="future-highlow">
+                    <p class="future-temprange">
+                        <span class="high">{{elem[3] | default('-')}}</span> | <span class="low">{{elem[4] | default('-')}}</span></p>
+                </div>
+            </div>
+            <div class="container">
+                {% set elem = [] %}
+                {% for value in future[1].values() %}
+                    {{ elem.append(value) or "" }}
+                {% endfor %}
+                <div class="future-dayofweek">
+                    <h2>{{ elem[0] | default('---') }}</h2>
+                </div>
+                <div class="future-weathericon">
+                    <i class="wi {{elem[1] | default('wi-cloud')}}"></i>
+                </div>
+                <p class="future-conditions">{{elem[2] | default('--')}}</p>
+                <div class="future-highlow">
+                    <p class="future-temprange">
+                        <span class="high">{{elem[3] | default('-')}}</span> | <span class="low">{{elem[4] | default('-')}}</span></p>
+                </div>
+            </div>
+            <div class="container">
+                {% set elem = [] %}
+                {% for value in future[2].values() %}
+                    {{ elem.append(value) or "" }}
+                {% endfor %}
+                <div class="future-dayofweek">
+                    <h2>{{ elem[0] | default('---') }}</h2>
+                </div>
+                <div class="future-weathericon">
+                    <i class="wi {{elem[1] | default('wi-cloud')}}"></i>
+                </div>
+                <p class="future-conditions">{{elem[2] | default('--')}}</p>
+                <div class="future-highlow">
+                    <p class="future-temprange">
+                        <span class="high">{{elem[3] | default('-')}}</span> | <span class="low">{{elem[4] | default('-')}}</span></p>
+                </div>
+            </div>      
+        </div> 
+        <footer>
+            <p>Created by <a href="http://github.com/mschreider" title="Visit Github" target="_blank">Matt Schreider</a> | Weather Data from <a href="http://www.worldweatheronline.com" title="worldweatheronline.com" target="_blank">World Weather Online</a></p>
+        </footer>
+
+
+    </body>
+    
+<html>

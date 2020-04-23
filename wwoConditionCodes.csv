@@ -1,0 +1,51 @@
+WeatherCode;Condition;CSS_Icon
+395;Moderate or heavy snow in area with thunder;wi-snow
+392;Patchy light snow in area with thunder;wi-snow
+389;Moderate or heavy rain in area with thunder;wi-thunderstorm
+386;Patchy light rain in area with thunder;wi-storm-showers
+377;Moderate or heavy showers of ice pellets;wi-sleet
+374;Light showers of ice pellets;wi-sleet
+371;Moderate or heavy snow showers;wi-snow
+368;Light snow showers;wi-snow
+365;Moderate or heavy sleet showers;wi-sleet
+362;Light sleet showers;wi-sleet
+359;Torrential rain shower;wi-rain
+356;Moderate or heavy rain shower;wi-rain
+353;Light rain shower;wi-showers
+350;Ice pellets;wi-sleet
+338;Heavy snow;wi-snow
+335;Patchy heavy snow;wi-snow
+332;Moderate snow;wi-snow
+329;Patchy moderate snow;wi-snow
+326;Light snow;wi-snow
+323;Patchy light snow;wi-snow
+320;Moderate or heavy sleet;wi-sleet
+317;Light sleet;wi-sleet
+314;Moderate or Heavy freezing rain;wi-hail
+311;Light freezing rain;wi-hail
+308;Heavy rain;wi-rain
+305;Heavy rain at times;wi-rain
+302;Moderate rain;wi-rain
+299;Moderate rain at times;wi-rain
+296;Light rain;wi-showers
+293;Patchy light rain;wi-showers
+284;Heavy freezing drizzle;wi-sleet
+281;Freezing drizzle;wi-sleet
+266;Light drizzle;wi-showers
+263;Patchy light drizzle;wi-showers
+260;Freezing fog;wi-fog
+248;Fog;wi-fog
+230;Blizzard;wi-snow
+227;Blowing snow;wi-snow-wind
+200;Thundery outbreaks in nearby;wi-thunderstorm
+185;Patchy freezing drizzle nearby;wi-rain-mix
+182;Patchy sleet nearby;wi-rain-mix
+179;Patchy snow nearby;wi-sleet
+176;Patchy rain nearby;wi-showers
+143;Mist;wi-sprinkle
+122;Overcast;wi-day-sunny-overcast
+119;Cloudy;wi-cloudy
+116;Partly Cloudy;wi-cloudy
+113;Clear/Sunny;wi-day-sunny
+000;Clear;wi-night-clear
+000;Sunny;wi-day-sunny
