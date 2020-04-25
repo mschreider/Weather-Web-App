@@ -3,12 +3,12 @@ from flask import Flask, render_template, request
 import json, pandas
 import sys, datetime
 
-def get_IP():
+""" def get_IP():
     url = "http://checkip.dyndns.org"
     data = urllib.request.urlopen(url).read().decode('utf-8')   # .decode(utf-8) converts from 'bytes' to 'str'
     #ip_address = str(request.remote_addr)
     ip_address = data[76:90]    # Parse 76th to 90th index of str
-    return ip_address
+    return ip_address """
 
 def get_information(ip_address):
     key = "key=d3dc97f5adf0499894b215338200504"
@@ -73,11 +73,11 @@ def get_futureweather(json_data, dayIndex):
     future_low = future_weather['mintempF']
     return future_weekday, future_conditions, future_high, future_low
 
-def run():
+def run(ip_address):
 
-    ip_address = get_IP()  # uncomment when ready to deploy
+    # ip_address = get_IP()  # uncomment when ready to deploy
     json_data = get_information(ip_address)    # uncomment when ready to deploy
-    #with open('data.json') as f:    #remove when ready to deploy
+    # with open('data.json') as f:    #remove when ready to deploy
     #    json_data = json.load(f)    #remove when ready to deploy
 
     location = get_location(json_data)

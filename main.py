@@ -10,7 +10,8 @@ def index():
 @app.route('/data', methods=['GET', 'POST'])
 def data():
     if request.method == 'POST':
-        future, location, long_date, current_weathericon, current_temp, current_conditions = backend.run()
+        ip_address = request.remote_addr
+        future, location, long_date, current_weathericon, current_temp, current_conditions = backend.run(ip_address)
         return render_template('data.html', future=future, 
                                             location=location, 
                                             date=long_date, 
