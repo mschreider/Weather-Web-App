@@ -83,15 +83,31 @@ nav {
 	border: 1px solid rgba(255,255,255,0.75);
 }
 
+@keyframes pulse {
+	20% { 
+        background: rgba(255,255,255,0.25); 
+    }
+    100% { 
+        background: rgba(255,255,255,0.25); 
+    }
+}
+
 @-webkit-keyframes pulse {
-	20% { background: rgba(255,255,255,0.25); }
+	20% { 
+        background: rgba(255,255,255,0.25); 
+    }
+    100% { 
+        background: rgba(255,255,255,0.25); 
+    }
 }
 
 /* locateBtn Pulse Animation */
+
+
 #locateBtn.pulse {
-    -webkit-animation-name: pulse;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     
 }
 
