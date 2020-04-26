@@ -4,8 +4,8 @@
 
 * {
 	box-sizing: border-box;
-    margin: 0 !important;
-	padding: 0 !important;
+    margin: 0;
+	padding: 0;
 }
 
 /* Remove outline > Apply other styles for accessibility */
@@ -83,13 +83,14 @@ nav {
 	border: 1px solid rgba(255,255,255,0.75);
 }
 
+@-webkit-keyframes pulse {
+	20% { background: rgba(255,255,255,0.25); }
+}
 
 /* locateBtn Pulse Animation */
 #locateBtn.pulse {
-	animation: pulse 2s infinite;
-}
-@keyframes pulse {
-	20% { background: rgba(255,255,255,0.25); }
+    -webkit-animation: pulse 2s infinite;
+    
 }
 
 /*----------------
@@ -246,4 +247,4 @@ a:hover {
     footer p {
       font-size: 0.5em;
     }
-  }
+}
