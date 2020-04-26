@@ -89,7 +89,9 @@ nav {
 
 /* locateBtn Pulse Animation */
 #locateBtn.pulse {
-    -webkit-animation: pulse 2s infinite;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     
 }
 
