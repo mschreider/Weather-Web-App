@@ -16,18 +16,17 @@ $(document).ready(function () {
         });
     } 
 
-    window.onload = function() {
+    /* window.onload = function() {
         // Suggest to share location with message and button animation
         setTimeout(function() {
             showStatus();
             $('#locateBtn').addClass('pulse');
         }, 1000);
-    
-    };
+    }; */
 
-    /* window.addEventListener ? 
+    window.addEventListener ? 
     window.addEventListener("load",showStatus(),false) : 
     window.attachEvent && window.attachEvent("onload",showStatus);
-    */
+   
     
 });
