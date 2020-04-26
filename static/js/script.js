@@ -21,7 +21,7 @@ $(document).ready(function () {
         setTimeout(function() {
             showStatus();
             $('#locateBtn').addClass('pulse');
-        }, 2000);
+        }, 1000);
     
     };
 

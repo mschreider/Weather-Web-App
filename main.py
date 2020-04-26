@@ -8,7 +8,7 @@ app = Flask(__name__, static_url_path="/static")
 def index():
     return render_template('index.html')
 
-@app.route('/data', methods=['GET'])
+@app.route('/data/', methods=['GET'])
 def data():
     if request.method == 'GET':
         ip_address = request.remote_addr
