@@ -4,8 +4,8 @@
 
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    margin: 0 !important;
+	padding: 0 !important;
 }
 
 /* Remove outline > Apply other styles for accessibility */
@@ -242,3 +242,8 @@ a:hover {
 	text-decoration: underline;
 }
 
+@media only screen and (max-width: 600px) {
+    footer p {
+      font-size: 0.5em;
+    }
+  }
