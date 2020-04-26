@@ -15,8 +15,8 @@ def get_information(ip_address):
     url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?" + key + "&q="+ ip_address + "&format=json&num_of_days=4&includelocation=yes"
     data = urllib.request.urlopen(url).read()   
     json_data = json.loads(data)    #converts to json file
-    with open("weather_data.json", 'x') as file:
-       json.dump(json_data, file)
+    #with open("weather_data.json", 'x') as file:
+    #    json.dump(ip_address, file)
     return json_data
 
 def get_location(json_data):
